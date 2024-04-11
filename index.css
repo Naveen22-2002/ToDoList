@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #323232;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #d3c7c7;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    margin-bottom: 25px;
+}
+
+.input-section input[type=text] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 70%;
+}
+
+.input-section button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-section button:hover {
+    background-color: #131d29;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list__title {
+    font-size: 20px;
+    color: #4b0202;
+    margin-bottom: 10px;
+}
+
+.todo-list__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.todo-list__label input[type=checkbox] {
+    margin-right: 10px;
+    transform: translateY(1px);
+}
+
+.todo-list__label span {
+    font-size: 18px;
+    color: darkviolet;
+    
+    flex: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.todo-list__label span:hover {
+    color: #2a08d4;
+}
+
+.todo-list__label input[type=checkbox]:checked + span {
+    text-decoration: line-through;
+    color: #777;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ToDo List</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter task" />
+            <button type="button" onclick="addTask()">Add Task</button>
+        </div>
+        <form id="taskForm">
+            <fieldset class="todo-list">
+                <legend class="todo-list__title">Tasks</legend>
+                
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById("taskInput");
+            var task = taskInput.value.trim();
+
+            if (task !== "") {
+                var todoList = document.querySelector(".todo-list");
+
+                var label = document.createElement("label");
+                label.classList.add("todo-list__label");
+
+                var input = document.createElement("input");
+                input.setAttribute("type", "checkbox");
+                input.setAttribute("name", "task");
+                input.setAttribute("value", task);
+
+                var span = document.createElement("span");
+                span.textContent = task;
+
+                label.appendChild(input);
+                label.appendChild(span);
+
+                todoList.appendChild(label);
+
+                
+                taskInput.value = "";
+            } else {
+                alert("Please enter a task.");
+            }
+        }
+    </script>
+</body>
+</html>
